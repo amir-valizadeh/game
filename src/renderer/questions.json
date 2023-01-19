@@ -1,0 +1,428 @@
+{
+  "easy": {
+    "1": {
+      "question": "در دوره ی اموزشی چند مرحله تیر اندازی داریم؟",
+      "option1": "یک مرحله",
+      "option2": "سه مرحله",
+      "option3": "پنج مرحله",
+      "answer": "option3"
+    },
+    "2": {
+      "question": "کدام یک از موارد زیر شامل انظباط نیست؟",
+      "option1": "التزام عملی به ولایت فقیه",
+      "option2": "مرتب کردن وسایل شخصی",
+      "option3": "رعایت سلسله مراتب",
+      "answer": "option2"
+    },
+    "3": {
+      "question": " کالیبر اسلحه ژ۳ چقدر است؟",
+      "option1": "۷.۲۶",
+      "option2": "۶.۲۷",
+      "option3": "۷.۶۲",
+      "answer": "option3"
+    },
+    "4": {
+      "question": "کدام یک دارای درجه ی بالاتری است؟",
+      "option1": "سرجوخه",
+      "option2": "استوار یکم",
+      "option3": "ستوان یکم",
+      "answer": "option3"
+    },
+    "5": {
+      "question": "برنامه سین چیست",
+      "option1": "برنامه ساعتی خدمتی روزانه",
+      "option2": "برنامه روزانه خدمتی ساعتی",
+      "option3": "برنامه روزانه و هفتگی خدمتی",
+      "answer": "option1"
+    },
+    "6": {
+      "question": "کدام یک میتواند نام شناسایی باشد",
+      "option1": "ارومیه ۴۴۱",
+      "option2": " سگ ۴۳۲۱",
+      "option3": " بوستان ۵۳۱",
+      "answer": "option1"
+    },
+    "7": {
+      "question": "کدام یک میتواند ",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "8": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "9": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "10": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "11": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "12": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "13": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "14": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "15": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "16": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "17": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "18": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "19": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "20": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    }
+  },
+  "medium": {
+    "1": {
+      "question": "در دوره ی اموزشی چند مرحله تیر اندازی داریم؟",
+      "option1": "یک مرحله",
+      "option2": "سه مرحله",
+      "option3": "پنج مرحله",
+      "answer": "option3"
+    },
+    "2": {
+      "question": "در مرحله ی اول چه کاری انجام می دهیم؟",
+      "option1": "تعریف مشکل",
+      "option2": "تعریف راه حل",
+      "option3": "تعریف مشتری",
+      "answer": "option1"
+    },
+    "3": {
+      "question": "در مرحله ی دوم چه کاری انجام می دهیم؟",
+      "option1": "تعریف مشکل",
+      "option2": "تعریف راه حل",
+      "option3": "تعریف مشتری",
+      "answer": "option2"
+    },
+    "4": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "5": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "6": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "7": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "8": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "9": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "10": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "11": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "12": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "13": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "14": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "15": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "16": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "17": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "18": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "19": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "20": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    }
+  },
+  "hard": {
+    "1": {
+      "question": "در دوره ی اموزشی چند مرحله تیر اندازی داریم؟",
+      "option1": "یک مرحله",
+      "option2": "سه مرحله",
+      "option3": "پنج مرحله",
+      "answer": "option3"
+    },
+    "2": {
+      "question": "در مرحله ی اول چه کاری انجام می دهیم؟",
+      "option1": "تعریف مشکل",
+      "option2": "تعریف راه حل",
+      "option3": "تعریف مشتری",
+      "answer": "option1"
+    },
+    "3": {
+      "question": "در مرحله ی دوم چه کاری انجام می دهیم؟",
+      "option1": "تعریف مشکل",
+      "option2": "تعریف راه حل",
+      "option3": "تعریف مشتری",
+      "answer": "option2"
+    },
+    "4": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "5": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "6": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "7": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "8": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "9": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "10": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "11": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "12": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "13": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "14": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "15": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "16": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "17": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "18": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "19": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    },
+    "20": {
+      "question": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "answer": ""
+    }
+  }
+}
