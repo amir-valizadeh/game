@@ -41,6 +41,6 @@ jobs:
           # CSC_LINK: ${{ secrets.CSC_LINK }}
           # CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
           # This is used for uploading release assets to github
-          GH_TOKEN: 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
+          GH_TOKEN: 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
         run: |
           npm exec electron-builder -- --publish always --win
