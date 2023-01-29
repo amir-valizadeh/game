@@ -1,5 +1,8 @@
 {
-  "description": "A foundation for scalable desktop apps",
+
+  "name": "sepahbod",
+  "version": "1.0.0",
+  "description": "millitary learning app",
   "keywords": [
     "electron",
     "boilerplate",
@@ -11,25 +14,21 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/electron-react-boilerplate/electron-react-boilerplate#readme",
-  "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://electron-react-boilerplate.js.org"
+    "name": "amirvalizadeh",
+    "email": "amirvalizadeh8731@gmail.com",
+    "url": "https://github.com/amir-valizadeh"
   },
   "contributors": [
     {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
+      "name": "amirvalizadeh",
+      "email": "amirvalizadeh8731@gmail.com",
+      "url": "https://github.com/amir-valizadeh"
     }
   ],
   "main": "./src/main/main.ts",
@@ -114,7 +113,8 @@
     "electron-updater": "^5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.0"
+    "react-router-dom": "^6.4.0",
+    "vazirmatn": "^33.0.3"
   },
   "devDependencies": {
     "@electron/notarize": "^1.2.3",
@@ -186,7 +186,7 @@
     "webpack-merge": "^5.8.0"
   },
   "build": {
-    "productName": "ElectronReact",
+    "productName": "sepahbod",
     "appId": "org.erb.ElectronReact",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
@@ -245,8 +245,9 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "electron-react-boilerplate",
-      "repo": "electron-react-boilerplate"
+      "owner": "amir-valizadeh",
+      "repo": "game",
+      "private":false
     }
   },
   "collective": {
