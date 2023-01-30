@@ -44,3 +44,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm exec electron-builder -- --publish always --win
+          
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.2
+
