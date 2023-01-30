@@ -1,0 +1,32 @@
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg,  #1e90ff,#28841e);
+
+}
+.menu-org {
+  /* suggest a background color please */
+  background-color: #68cfcb;
+  border-radius: 10px;
+  color: black;
+  padding: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  width: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+/* add transition style */
+.menu {
+  transition: all 0.5s;
+}

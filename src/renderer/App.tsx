@@ -4,9 +4,14 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-console */
 /* eslint-disable no-plusplus */
-import { electron } from 'process';
+
 import { useEffect, useMemo, useState, useRef } from 'react';
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  MemoryRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from 'react-router-dom';
 import wallBackground from '../../assets/wall3.png';
 import wallQ from '../../assets/assets/wallQ.png';
 import tank from '../../assets/tank2.png';
@@ -21,8 +26,11 @@ import Modal from './modal';
 import images from './images/images';
 import muteImage from '../../assets/mute.png';
 import unmuteImage from '../../assets/unmute.png';
+import cry from '../../assets/cry.png';
+import Menu from './menu/menu';
 
 const Hello = () => {
+  const navigate = useNavigate();
   const bSound = useMemo(() => new Audio(backgroundSound), []);
   const buSound = useMemo(() => new Audio(bulletSound), []);
   const gSound = useMemo(() => new Audio(gameOver), []);
@@ -31,21 +39,30 @@ const Hello = () => {
   const [qLevel, setQLevel] = useState(false);
   const [mute, setMute] = useState(false);
   const [menubar, setMenubar] = useState(false);
+  const [end, setEnd] = useState(false);
   const wall = useRef(40);
   const hit = useRef(0);
-  const wallIncrease = useRef(0.4);
+  const wallIncrease = useRef(2.4);
   const answeredQuestion = useRef(1);
   const animation = useRef(0);
   // parse json file
   let stopAnime = false;
   const step = 240;
-  const dy = -5;
-
+  function playGame() {
+    stopAnime = false;
+    setAnimationPaused(false);
+  }
+  function stopGame() {
+    stopAnime = true;
+    setAnimationPaused(true);
+  }
+  function onMutef() {
+    setMute(!mute);
+  }
   useEffect(() => {
     const canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
     const ctx = canvas.getContext('2d');
 
-    let y = canvas.height - 30;
     let bulletX = 15;
     let bulletY = 150;
     const pressedKeys = new Set();
@@ -103,7 +120,7 @@ const Hello = () => {
     }
 
     function moveBullet() {
-      if (pressedKeys.has('Space') && bulletY === 150 && !mute) buSound.play();
+      if (pressedKeys.has('Space') && bulletY === 150) buSound.play();
       const img = new Image();
       img.src = bullet;
       // console.log({
@@ -131,7 +148,7 @@ const Hello = () => {
       // if (bulletY >= 740) {
       //   bulletY = 150;
       // }
-      if (y >= canvas.height) {
+      if (bulletY >= canvas.height - 70) {
         bulletY = 150;
       }
     }
@@ -182,36 +199,33 @@ const Hello = () => {
       }
 
       ctx?.fillText(questions[answeredQuestion.current][0], 440, 30);
+      console.log(wall.current, canvas.height - 150);
+      if (wall.current >= canvas.height - 150) {
+        setMute(true);
+        stopGame();
+        gSound.play();
+        setEnd(true);
 
-      // if (wall.current >= 600) {
-      //   bSound.pause();
-
-      //   gSound.play();
-
-      //   setTimeout(() => {
-      //     alert('game over');
-      //   }, 0.4);
-      //   // clearInterval(iterval);
-      //   window.cancelAnimationFrame(animation);
-      //   wall.current = 40;
-      // }
+        // clearInterval(iterval);
+        window.cancelAnimationFrame(animation.current);
+        wall.current = 40;
+      }
     }
 
     function draw() {
       drawTank();
       drawBricks();
       moveBullet();
-      y += dy;
       wall.current += wallIncrease.current;
       if (!stopAnime) {
-        console.log('stopAnime', stopAnime);
+        // console.log('stopAnime', stopAnime);
         window.requestAnimationFrame(draw);
       }
       // console.log(canvas.height - wall.current, bulletY);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     if (!animationPaused) {
-      console.log('animationPaused', animationPaused);
+      // console.log('animationPaused', animationPaused);
       animation.current = window.requestAnimationFrame(draw);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -227,24 +241,9 @@ const Hello = () => {
       bSound.volume = 0.5;
       // backgroundSound.pause();
     }
-    console.table({ animationPaused, mute });
+    // console.table({ animationPaused, mute });
   }, [animationPaused, bSound, mute]);
-  function pause() {
-    stopAnime = !stopAnime;
-    setAnimationPaused(!animationPaused);
-    setMenubar(!menubar);
-  }
-  function playGame() {
-    stopAnime = false;
-    setAnimationPaused(false);
-  }
-  function stopGame() {
-    stopAnime = true;
-    setAnimationPaused(true);
-  }
-  function onMutef() {
-    setMute(!mute);
-  }
+
   useEffect(() => {
     if (!qLevel) {
       playGame();
@@ -270,9 +269,10 @@ const Hello = () => {
             alt=""
             width={50}
             onClick={onMutef}
+            className={end ? `hidden` : ``}
           />
         </div>
-        <div className={qLevel ? `hidden` : ``}>
+        <div className={qLevel || end ? `hidden` : ``}>
           <button
             style={{ left: 0, zIndex: 10000 }}
             className={!menubar ? `none button-68 menu_gradiant` : `hidden`}
@@ -294,17 +294,23 @@ const Hello = () => {
         </div>
         <div className={menubar ? `modal_background menu` : `hidden`}>
           <button
-            className="button-68"
+            className="button-68 red"
             type="submit"
             onClick={() => window.close()}
           >
             خروج از بازی
           </button>
-          <button className="button-68" type="submit">
+          <button
+            className="button-68 green"
+            type="submit"
+            onClick={() => {
+              navigate('/', { state: { first: true } });
+            }}
+          >
             آموزش نحوه ی بازی
           </button>
           <button
-            className="button-68"
+            className="button-68 green"
             type="submit"
             onClick={() => {
               playGame();
@@ -312,6 +318,27 @@ const Hello = () => {
             }}
           >
             ادامه بازی
+          </button>
+        </div>
+        <div className={end ? `modal_background menu gap_10` : `hidden`}>
+          <p className="text"> متاسفانه شما قادر به پاسخگویی نبودید و باختید</p>
+          <img src={cry} alt="" />
+          <br />
+          <button
+            className="button-68 green"
+            type="submit"
+            // eslint-disable-next-line no-restricted-globals
+            onClick={() => location.reload()}
+          >
+            بازی مجدد
+          </button>
+          <button
+            className="button-68 red"
+            type="submit"
+            onClick={() => window.close()}
+          >
+            {' '}
+            خروج از بازی
           </button>
         </div>
       </div>
@@ -323,51 +350,9 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/engine" element={<Hello />} />
+        <Route path="/" element={<Menu />} />
       </Routes>
     </Router>
   );
 }
-// function playSound(key: string, options = {}) {
-//   if (sounds[key] === undefined) return false;
-//   sounds.explosion.currentTime = 0;
-
-//   sounds[key].play();
-//   return true;
-// }
-// function gameOver() {
-//   playSound('gameover');
-// }
-// function loadAudio(path: any) {
-//   return new Promise((resolve, reject) => {
-//     const audio = new Audio(path);
-//     audio.oncanplaythrough = () => resolve(audio);
-//     audio.onerror = reject;
-//   });
-// }
-// function loadSounds() {
-//   const files = {
-//     background: '../../assets/sounds/background.mp3',
-//     gameover: '../../assets/sounds/gameover.mp3',
-//     bullet: '../../assets/sounds/bullet.mp3',
-//   };
-//   const promises = Object.entries(files).map(async ([key, value]) => {
-//     sounds[key] = await loadAudio(value);
-//   });
-//   return Promise.all(promises);
-// }
-
-// function pauseSound(key: string) {
-//   if (sounds[key] === undefined) return false;
-//   sounds[key].pause();
-//   return true;
-// }
-
-// eslint-disable-next-line promise/catch-or-return
-// loadSounds().then(() => console.log('all sounds loaded'));
-// playSound('background', {
-//   loop: true,
-//   volume: 0.5,
-// });
-// move bullet up using setInterval
-// var iterval = setInterval(draw, 30);
