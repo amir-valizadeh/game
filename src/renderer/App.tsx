@@ -42,7 +42,7 @@ const Hello = () => {
   const [end, setEnd] = useState(false);
   const wall = useRef(40);
   const hit = useRef(0);
-  const wallIncrease = useRef(2.4);
+  const wallIncrease = useRef(0.4);
   const answeredQuestion = useRef(1);
   const animation = useRef(0);
   // parse json file
